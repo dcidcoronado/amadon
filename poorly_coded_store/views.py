@@ -28,9 +28,7 @@ def checkout(request):
 
 
 def process(request):
-    print(request.POST)
     quantity_from_form = int(request.POST["quantity"])
-    print(int(request.POST["quantity"]))
     this_buy = request.POST["item_id"]
     item_from_form = Product.objects.get(id=this_buy)
 
